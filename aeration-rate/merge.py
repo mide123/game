@@ -10,7 +10,7 @@ import numpy as np
 import gc
 
 xgboost_res = pd.read_csv("./res/catboost_res.csv")
-lightgbm_res = pd.read_csv("./res/lightgbm_res.csv")
+lightgbm_res = pd.read_csv("./res/lightgbm_random_res.csv")
 
 res = pd.DataFrame()
 res['time'] = lightgbm_res['time']
