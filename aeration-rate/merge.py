@@ -15,8 +15,8 @@ xgboost_res = pd.read_csv("./res/xgboost_res.csv")
 res = pd.DataFrame()
 res['time'] = lightgbm_res['time']
 lightgbm_po = 0.65
-res[['Label1', 'Label2']] = 0.7 * lightgbm_res[['Label1', 'Label2']] + 0.25 * catboost_res[
-    ['Label1', 'Label2']] + 0.05*xgboost_res[['Label1', 'Label2']]
+res[['Label1', 'Label2']] = 0.8 * lightgbm_res[['Label1', 'Label2']] + 0.1 * catboost_res[
+    ['Label1', 'Label2']] + 0.1*xgboost_res[['Label1', 'Label2']]
 res.to_csv("./res/merge_res.csv", index=False)
 
 # res = pd.DataFrame()
